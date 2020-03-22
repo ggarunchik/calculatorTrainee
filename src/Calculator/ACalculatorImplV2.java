@@ -4,6 +4,10 @@ import Calculator.utils.CalculatorUtil;
 import Calculator.utils.ReaderUtil;
 import Calculator.utils.WriterUtil;
 
+/**
+ * Реализация Калькулятора говорящего HELLO
+ */
+
 public class ACalculatorImplV2 extends ACalculator {
 
 

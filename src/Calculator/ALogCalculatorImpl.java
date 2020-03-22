@@ -20,7 +20,7 @@ public class ALogCalculatorImpl extends ALogCalculator {
 
     @Override
     public void showCalculatorLog() {
-        //System.out.println("History:");
+        // System.out.println("History:");
         for (int i = 0; i < resultHistory.length; i++) {
             if (resultHistory[i] == null) {
                 break;
@@ -38,7 +38,7 @@ public class ALogCalculatorImpl extends ALogCalculator {
                 double sumSecondInput = ReaderUtil.readDouble();
                 WriterUtil.displayDouble(CalculatorUtil.sum(sumFirstInput, sumSecondInput));
                 addCalculatorLog(apType, sumFirstInput, sumSecondInput, CalculatorUtil.sum(sumFirstInput, sumSecondInput));
-                showCalculatorLog();
+                //    showCalculatorLog();
                 break;
             case "div":
                 WriterUtil.displayString("Enter 2 double to DIV:");
@@ -46,7 +46,7 @@ public class ALogCalculatorImpl extends ALogCalculator {
                 double divSecondInput = ReaderUtil.readDouble();
                 WriterUtil.displayDouble(CalculatorUtil.div(divFirstInput, divSecondInput));
                 addCalculatorLog(apType, divFirstInput, divSecondInput, CalculatorUtil.div(divFirstInput, divSecondInput));
-                showCalculatorLog();
+                //      showCalculatorLog();
                 break;
             case "mul":
                 WriterUtil.displayString("Enter 2 double to MUL:");
@@ -54,7 +54,7 @@ public class ALogCalculatorImpl extends ALogCalculator {
                 double mulSecondInput = ReaderUtil.readDouble();
                 WriterUtil.displayDouble(CalculatorUtil.mul(mulFirstInput, mulSecondInput));
                 addCalculatorLog(apType, mulFirstInput, mulSecondInput, CalculatorUtil.mul(mulFirstInput, mulSecondInput));
-                showCalculatorLog();
+                //       showCalculatorLog();
                 break;
             case "min":
                 WriterUtil.displayString("Enter 2 double to MIN:");
@@ -62,7 +62,7 @@ public class ALogCalculatorImpl extends ALogCalculator {
                 double minSecondInput = ReaderUtil.readDouble();
                 WriterUtil.displayDouble(CalculatorUtil.min(minFirstInput, minSecondInput));
                 addCalculatorLog(apType, minFirstInput, minSecondInput, CalculatorUtil.min(minFirstInput, minSecondInput));
-                showCalculatorLog();
+                //     showCalculatorLog();
                 break;
             default:
                 System.out.println("default");

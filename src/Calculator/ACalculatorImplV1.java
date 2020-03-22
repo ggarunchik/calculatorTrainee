@@ -4,6 +4,10 @@ import Calculator.utils.CalculatorUtil;
 import Calculator.utils.ReaderUtil;
 import Calculator.utils.WriterUtil;
 
+/**
+ * Реализация обычного калькулятора
+ */
+
 public class ACalculatorImplV1 extends ACalculator {
 
     @Override
