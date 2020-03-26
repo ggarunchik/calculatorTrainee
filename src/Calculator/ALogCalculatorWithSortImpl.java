@@ -13,7 +13,7 @@ public class ALogCalculatorWithSortImpl extends  ALogCalculatorWithSort {
 
     @Override
     public void showCalculatorLogAndSortResult() {
-        System.out.println(resultSet);
+        resultSet.forEach(System.out::println);
     }
 
     @Override
