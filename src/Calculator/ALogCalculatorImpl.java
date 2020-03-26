@@ -6,11 +6,14 @@ import Calculator.utils.ReaderUtil;
 import Calculator.utils.WriterUtil;
 
 import java.util.ArrayList;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class ALogCalculatorImpl extends ALogCalculator {
 
     private OperationUtil[] resultHistory = new OperationUtil[50];
     private ArrayList<OperationUtil> resultHistoryArray = new ArrayList<>();
+    private Set<OperationUtil> resultSet = new TreeSet<>();
 
     // private void addCalculatorLog(String operationType, double firstInput, double secondInput, double result) {
     //     for (int i = 0; i < resultHistory.length; i++) {
@@ -24,6 +27,7 @@ public class ALogCalculatorImpl extends ALogCalculator {
     private void addCalculatorLogArray(String operationType, double firstInput, double secondInput, double result) {
         resultHistoryArray.add(new OperationUtil(operationType, firstInput, secondInput, result));
     }
+
 
     @Override
     public void showCalculatorLog() {
@@ -54,7 +58,7 @@ public class ALogCalculatorImpl extends ALogCalculator {
                 double divSecondInput = ReaderUtil.readDouble();
                 WriterUtil.displayDouble(CalculatorUtil.div(divFirstInput, divSecondInput));
                 //     addCalculatorLog(apType, divFirstInput, divSecondInput, CalculatorUtil.div(divFirstInput, divSecondInput));
-                addCalculatorLogArray(apType, divFirstInput, divSecondInput, CalculatorUtil.div(divFirstInput, divSecondInput));
+                addCalculatorLogArray(apType, divFirstInput, divSecondInput, CalculatorUtil.mul(divFirstInput, divSecondInput));
                 //      showCalculatorLog();
                 break;
             case "mul":
